@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background-color: #fff;
+    width: 100%;
+    min-height: 100vh;
+}
+
+main {
+	width: 100%;
+	margin: 0 auto;
+    max-width: 1300px;
+}
+
+
+/* =====================================================================
+======================== Home Page & Skip Link =========================
+========================================================================*/
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background-color: #ffee00;
+	color: white;
+	padding: 8px;
+	font-size: 15px;
+	z-index: 100;
+	text-decoration: none
+}
+.skip-link:focus {
+	top: 0px
+}
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+    background-color: #e9e9e8;
+    padding-right: 60px;
+}
+.logo {
+    cursor: pointer;
+	margin-right: auto;
+    width: 250px;
+    height: 50px;    
+    box-sizing: border-box;
+	display: inline-block;
+}
+/* ==============================
+===== Preloader ===========
+==============================  */
+#preloader {
+    background: #fff url(/loader/restoloader.gif) no-repeat center center;
+    height: 100vh;
+    background-size: 10%;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+}
+
+/* ==============================
+===== Navigator Menu ===========
+==============================  */
+.nav-menu {
+    list-style: none;
+    z-index: 9;
+}
+.nav-menu li {
+    display: inline-block;
+    padding: 0px 15px;
+    color: black;
+}
+.nav-menu li a {
+    transition: all 0.3s ease 0s;
+}
+.nav-menu li a:hover {
+    color: orange;
+}
+ul a {
+    font-size: 18px;
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 15px;
+    margin-right :60px;
+    width: 44px;
+    height: 44px;
+}
+/* ==============================
+===== Hamburger Menu ===========
+==============================  */
+.burger{
+    display: none;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+}
+.burger div {
+    width: 31px;
+    height: 5px;
+    background-color: black;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+/* ======================================
+===== Toggle Line Hamburger menu ========
+=========================================  */
+
+.toggle .line1 {
+    transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotateZ(405deg) translate(-8px, -6px);
+}
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* ==============================
+===== Jumbotron Heroes ========
+==============================  */
+
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 350px;
+    width: 100%;
+    text-align: center;
+    /* background-image: url("/images/hero-image_2.jpg"); */
+    background-position: center;
+    justify-content: center;
+}
+.hero img {
+    width: 100%;
+    height: 350px;
+    
+}
+/* .hero {
+    background-image: url("/images/hero-image_2.jpg");
+    background-image: -webkit-image-set(
+      url("/images/hero-image_2-small.jpg") 1x,
+      url("/images/hero-image_2-large.jpg") 2x);
+    background-image: image-set(
+      url("/images/hero-image_2-small.jpg") 1x,
+      url("/images/hero-image_2-large.jpg") 2x);
+} */
+
+/* .hero {
+    background-image: url("/images/hero-image_2-small.jpg");
+  } */
+  /* Only override this if one of the conditions for the 1500w image is met */
+  /* @media 
+    (min-width: 375px) and (max-width: 400px),
+    (min-width: 468px),
+    (-webkit-min-device-pixel-ratio: 2), 
+    (min-resolution: 192dpi) {
+    .img {
+      background-image: url("/images/hero-image_2-large.jpg");
+    }
+  } */
+
+.hero-head {
+    margin: 0 auto;
+    max-width: 800px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+.hero-title {
+    color: #fff;
+    font-weight: 500;
+    text-shadow: 3px 2px 1px black;
+    font-size: 40px;
+    align-items: center;
+    
+}
+.hero-tag {
+    color: #fff;
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 3px 2px 1px black;
+    align-items: center;
+}
+
+/* ==============================
+===== Latest Label ========
+==============================  */
+
+.latest {
+    text-align: center;
+}
+.latest-label {
+    color: black;
+    font-size: 15px;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+    padding: 20px;
+    border: dotted 2px rgba(0, 0, 0, 0.034);
+    border-width: 50%;
+}
+.latest-label::after {
+    content: '';
+    margin-top: 16px;
+    display: block;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.034);
+}
+
+/* ////////// Label Post ////////// */
+
+.label {
+    text-align: center;
+	padding: 20px;
+}
+
+.post {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ==============================
+===== Main Content ========
+==============================  */
+   
+  main {
+    padding: 32px;
+    flex: 1;
+  }
+   
+  .content {
+    margin: 0 auto;
+    min-height: 100%;
+  }
+   
+  .content .content__heading {
+    font-weight: normal;
+  }
+   
+   
+/*==================================================
+=========== Restaurants Container===================
+====================================================*/
+   
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 32px 0;
+  }
+   
+   
+  /* ==============================
+===== Restaurant Item ========
+==============================  */
+   
+  .restaurant-item {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+   
+  .restaurant-item__header {
+    position: relative;
+  }
+
+  .restaurant-item__header__poster {
+    width: 100%;
+    height: 200px;
+  }
+
+  .restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+    width: 100%;
+
+  }
+   
+  .restaurant-item .restaurant-item__header .restaurant-item__header__rating {
+    position: absolute;
+    padding: 6px;
+    bottom: 20px;
+    right: 0;
+    display: inline-block;
+    background-color: #307499;
+    border-radius: 30px 0px 0px 30px;
+    color: white;
+    font-size: 14px;
+  }
+  .restaurant-item .restaurant-item__header .restaurant-item__header__city {
+    position: absolute;
+    padding: 8px;
+    top: 10px;
+    left: 5px;
+    display: inline;
+    border-radius: 8px;
+    border: solid gold 2px;
+    background-color: rgba(0, 0, 0, 0.63);
+    color: white;
+    font-size: 16px;
+  }
+   
+  .restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__city_location {
+    margin-left: 10px;
+  }
+
+  .restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
+    margin-left: 10px;
+  }
+   
+  .restaurant-item .restaurant-item__content {
+    padding: 16px;
+  }
+   
+  .restaurant-item .restaurant-item__content h3 {
+    margin: 0 0 10px 0;
+    color: #307499;
+  }
+   
+  .restaurant-item .restaurant-item__content h3 a {
+    color: orange;
+    text-decoration: none;
+  }
+   
+  .restaurant-item .restaurant-item__content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+
+  .restaurant-item .restaurant-item__detail-btn a {
+    display: inline-block;
+    margin-left: 20px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #307499;
+    }
+
+  .restaurant-item .restaurant-item__detail-btn a:hover {
+    color: #307499;
+    width: 44px;
+    opacity: 0.7;
+}
+
+
+/*================================================================
+====================== Detail Pages CSS ==========================
+==================================================================*/
+
+.card__detail {
+    margin: 10px;
+    max-width: 1300px;
+}
+.card__detail .restaurant__menu .food__item {
+    margin-left: 35px;
+}
+.page__info {
+    margin-top: -50px;
+    background-color: rgba(233, 232, 232, 0.301);
+    text-align: center;
+}
+.restaurant__title {
+    padding-bottom: 5px;
+    margin-top: 30px;
+    color: maroon;
+}
+.restaurant__poster {
+    border: solid rgb(233, 232, 232) 5px;
+    border-radius: 12px;
+    max-width: 500px;
+    height: auto;
+    width: 100%;
+}
+.restaurant__info {
+    margin-top: -350px;
+    margin-left: 520px;
+}
+.restaurant__info .address {
+    margin-bottom: 10px;
+}
+.restaurant__info .city {
+    margin-bottom: 10px;
+}
+.restaurant__info .rating {
+    margin-bottom: 10px;
+}
+.restaurant__info .category {
+    margin-bottom: 10px;
+}
+.menu__list {
+    margin-left: 520px;
+}
+.list__fd {
+    display: block;
+    margin: 4px;
+    cursor: pointer;
+    margin-left: 520px;
+}
+.restaurant__description {
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+/* ==============================
+===== Customer Reviews ========
+==============================  */
+.customerReview h4 {
+    font-size: 14;
+    padding: 8px;
+}
+.customerReview {
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    background-color: #fff;
+    overflow: hidden;
+    background: rgb(255, 255, 255);  
+}
+.customerReview__comment {
+    padding-top: 5px;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    box-shadow: 1px 4px 8px 0 rgba(133, 131, 131, 0.2);
+    border-radius: 6px;
+    background-color: white;
+    overflow: hidden;
+    background: white;
+    border: solid rgba(107, 103, 103, 0.185) 1px; 
+    margin: 5px;
+}
+.customerReview .date {
+    padding: 3px;
+    font-size: 14px;
+    font-style: italic;
+    color: #39A2DB ;
+}
+.customerReview .name {
+    font-weight: bold;
+}
+.customerReview .review {
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* ==============================
+=========== Footer ==============
+=================================  */
+
+  footer {
+    background-color: #2c3e50;
+    padding: 2em;
+    width: 100%;
+    text-align: center;
+    }
+    footer p {
+        text-decoration: none;
+        color: #fff
+    }
+    footer a {
+        text-decoration: none;
+        color: orange;
+        pointer-events:fill;
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+    }
+
+/* ==============================
+===== Favorite Button ========
+==============================  */
+
+    .like {
+        font-size: 18px;
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        background-color: orange;
+        color: white;
+        border: 0;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+   

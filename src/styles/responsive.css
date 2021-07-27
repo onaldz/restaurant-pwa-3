@@ -1,0 +1,340 @@
+
+@media screen and (max-width:1024px) {
+    main {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .card {
+        margin: 10px auto 10px auto;
+        width: 30%;
+        height: auto;
+        box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        background-color: #fff;
+        overflow: hidden;
+        background: rgb(233, 232, 232);
+        border: solid rgba(107, 103, 103, 0.185) 1px;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    body, html {
+        position: relative;
+        overflow-x: hidden;
+    }
+    .nav-menu li a {
+        color: black;
+        font-size: 15px;
+    }
+    .nav-menu {
+        width: 100%;
+        height: 270px;
+        position: absolute;
+        right: 0px;
+        top: 64px;
+        line-height: 50px;
+        align-items: center;
+        padding: 20px;
+        border-radius: 0 0 0 100px;
+        background-color: #e07400ef;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-menu li {
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+        margin-right: -20px;
+    }
+    .nav-active{
+        transform: translateX(0%);
+    }
+    #preloader {
+        background: #fff url(/loader/restoloader.gif) no-repeat center center;
+        height: 100vh;
+        background-size: 20%;
+        width: 100%;
+        position: fixed;
+        z-index: 99;
+    }
+}
+@media screen and (max-width: 770px) { 
+    main {
+        width: 100%;
+        margin: 0 auto
+    }
+    .card {
+        margin: 10px auto 10px auto;
+        width: 100%;
+        height: auto;
+        box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        background-color: #fff;
+        overflow: hidden;
+        background: rgb(233, 232, 232);
+        border: solid rgba(107, 103, 103, 0.185) 1px;
+    }
+    .nav-active{
+        transform: translateX(0%);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .card {
+        margin: 20px 30px 20px;
+        width: 100%;
+        height: auto px;
+        box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        background-color: #fff;
+        overflow: hidden;
+        background: rgb(233, 232, 232);
+        border: solid rgba(107, 103, 103, 0.185) 1px;
+    }    
+}
+
+@media screen and (max-width:500px) {
+    body, html {
+        position: relative;
+        overflow-x: hidden;
+    }
+    .nav-menu li a {
+        color: black;
+        font-size: 15px;
+    }
+    .nav-menu {
+        width: 100%;
+        height: 270px;
+        position: absolute;
+        right: 0px;
+        top: 64px;
+        line-height: 50px;
+        align-items: center;
+        padding: 20px;
+        border-radius: 0 0 0 100px;
+        background-color: #e07400ef;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.5s ease-in;
+    }
+    .nav-menu li {
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+        margin-right: -20px;
+    }
+    .card {
+        margin: 20px 30px 20px;
+        width: 100%;
+        height: auto;
+        box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        background-color: #fff;
+        overflow: hidden;
+        background: rgb(233, 232, 232);
+        border: solid rgba(107, 103, 103, 0.185) 1px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .burger{
+        display: block;
+        margin-right: -40px;
+    }
+    .card {
+        margin: 20px 30px 20px;
+        width: 100%;
+        height: auto;
+        box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        background-color: #fff;
+        overflow: hidden;
+        background: rgb(233, 232, 232);
+        border: solid rgba(107, 103, 103, 0.185) 1px;
+    }
+    .card .thumbnail {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .burger{
+        display: block;
+        margin-right: -50px;
+    }
+    .card {
+        margin: 20px 30px 20px;
+        width: 100%;
+        height: auto;
+        box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        background-color: #fff;
+        overflow: hidden;
+        background: rgb(233, 232, 232);
+        border: solid rgba(107, 103, 103, 0.185) 1px;
+    }
+}
+
+
+/* mobile responsive */
+@media screen and (min-width: 650px) {
+    
+    .restaurants {
+        grid-template-columns: 1fr 1fr;
+    }
+   
+    .restaurant {
+        grid-template-columns: auto 1fr;
+    }
+   
+    .restaurant .restaurant__title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+   
+    .restaurant .restaurant__overview {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+  }
+   
+ 
+   
+  @media screen and (min-width: 850px) {
+    .restaurants {
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+   
+  @media screen and (min-width: 1200px) {
+    .restaurants {
+        grid-template-columns: repeat(4, 1fr);
+    }
+  }
+   
+  @media screen and (min-width: 1600px) {
+    .restaurants {
+        grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+
+
+  /* ======================================================= */
+  /* responsive__detail */
+  /* =======================================================  */
+
+/* ipad Pro */
+
+/* ipad */
+@media screen and (max-width:768px) {
+    main {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .card {
+        margin: 10px auto 10px auto;
+        width: 30%;
+        height: auto;
+        box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        background-color: #fff;
+        overflow: hidden;
+        background: rgb(233, 232, 232);
+        border: solid rgba(107, 103, 103, 0.185) 1px;
+    }
+    .card__detail {
+        margin: 40px;
+        max-width: 1300px;
+        
+    }
+
+    .restaurant__info {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    
+    .restaurant__info .address {
+        margin-bottom: 10px;
+    }
+    .restaurant__info .city {
+        margin-bottom: 10px;
+    }
+    .restaurant__info .rating {
+        margin-bottom: 10px;
+    }
+    
+    .restaurant__info .category {
+        margin-bottom: 10px;
+    }
+    .menu__list {
+        margin-left: 0px;
+       
+    }
+    .list__fd {
+        display: block;
+        margin: 4px;
+        cursor: pointer;
+    }
+}
+
+/* iphone 6/7/8 plus */
+@media screen and (max-width:414px) {
+    main {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* Pixel /2 */
+@media screen and (max-width:411px) {
+    main {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* iphone x */
+
+
+
+
+@media screen  and (max-width:650px) {
+    .card__detail {
+        margin: 10px;
+    }
+
+}
+
+@media screen  and (min-width:320px) {
+    .card__detail {
+        margin: 5px;
+    }
+    .customerReview__comment {
+        margin: 5px;
+    }
+
+    .customerReview .review {
+        margin: 5px;
+    }
+
+    .customerReview .date {
+        margin: 5px;
+    }
+
+}
+@media screen  and (min-width:260px) {
+    .logo {
+        cursor: pointer;
+        margin-right: auto;
+        width: 200px;
+        height: 40px;    
+        box-sizing: border-box;
+        display: inline-block;
+    }
+}
